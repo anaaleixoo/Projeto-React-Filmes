@@ -1,80 +1,76 @@
-/*  A mãe de todos: */
-.main_login{
-    display: flex;
+/* Mãe de todos:*/
 
-    height: 100vh;
+.mae_de_todas{
+display: flex;
+height: 100vh;
 }
 
-/* Banner da esquerda: */ 
+/* Banner da esquerda:*/
 .banner{
-    background-image: url("../../assets/img/img/img/fundoLogin.png");
-    flex: 1;
-    /*modificar algumas caracteristicas da imagem: */
+flex: 1;
+    background-image: url(../../assets/img/fundoLogin.png);
+    /*modificar algumas caracteristicas da imagem */
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-
-    
-/* Form de login da direita: */
 }
+
+/* Form de login da direita:*/
 .section_login{
-    flex: 1; 
-
-    background-color: brown;
-
-
+    flex: 1;
     display: flex;
+    background-color: #CC3F55;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.form_login{
-    color: white; 
-
-    width: 70%;
-    height: 50%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: column;
+.section_login img{
+    width: 370px;
 }
-
-.form_login h1{ 
-    /*vai deixar o titulo com letras maiusculas*/
+.form_login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    width: 70%;
+    
+    justify-content: space-around;
+}
+.campos_login{
+    height: 57% ;
+}
+.form_login h1{
+    /*Vai deixar o texto maiusculas*/
     text-transform: uppercase;
-} 
-
+}
+.campo_imput{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 17%;
+}
 .campos_login{
     width: 100%;
 }
 
-.campo_input {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
+.campo_imput input{
+   border-radius: 5px;
+   height: 38px;
+   padding: 1px 10px;
+   border: none;
+   margin-top: 7px;
+   outline: none;
+   box-shadow: 1px 4px 4px 0px #00000081;
 }
 
-.campo_input input{
-    height: 30px; 
-    padding: 0px 10px; 
-    margin-top: 7px;
+/*responsividade*/ 
 
-    border: none;
-    outline: none; 
-    border-radius: 6px; 
-    box-shadow: 1 px 4px 4 px 0 px #00000045;
-}
+/*me de algumas caracteristicas de tela */
 
-
-/* RESPONSIVIDADE */
-
-/* me de algumas caracteristicas a partir de um tamanho de tela */
-@media screen and (max-width: 768px){
-    /* 0px ->  768 */
+@media screen and (max-width: 768px) {
+    /*0px -> 768px*/
     .banner{
-        /* desaparece o banner */
-        display:none;
+        display: none;
     }
 
 }

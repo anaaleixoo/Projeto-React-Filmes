@@ -1,39 +1,53 @@
-import "./Lista.css";
-import Editar from "../../assets/img/img/img/pen-to-square-solid.svg";
-import Excluir from "../../assets/img/img/img/trash-can-regular.svg";
-const Lista = () => {
-    return(
-        <section className="layout_grid listagem">
-            <h1>Lista dos Filmes</h1>
-                <hr/>
-
+import "./Lista.css"
+import Editar from "../../assets/img/pen-to-square-solid.svg"
+import Excluir from "../../assets/img/trash-can-regular.svg"
+const Lista = (props) => {
+    return (
+        <>
+            <section className="layout_grid listagem">
+                <h1>{props.tituloDaLista}</h1>
+                <hr />
                 <div className="tabela">
                     <table>
-                        {/* {cabecalho da tabela} */}
                         <thead>
-                            {/* { tr = table row} */}
                             <tr className="table_cabecalho">
-                                {/* {th => table head} */}
                                 <th>Nome</th>
-                                <th>Gênero</th>
+                                <th style={{ display: props.visibilidadeColuna }}>Gênero</th>
                                 <th>Editar</th>
                                 <th>Excluir</th>
                             </tr>
                         </thead>
-                        {/* {tbory => corpo da tabela} */}
+
                         <tbody>
-                          <tr className="item_lista">
-                            <td data-cell="Nome">Velozes e Furiosos</td>
-                            <td data-cell="Gênero">Ação</td>
-                            <td data-cell="Editar"><img src={Editar} alt="Caneta" /></td>
-                            <td data-cell="Excluir"><img src={Excluir} alt="Lixeira" /></td>
-                          </tr>
+                            <tr className="item_lista">
+                                <td data-cell="Nome">Pânico 5</td>
+                                <td data-cell="Gênero" style={{ display: props.visibilidadeColuna }}>Terror</td>
+                                <td data-cell="Editar"><img src={Editar} alt="Imagem de uma caneta" /></td>
+                                <td data-cell="Excluir"><img src={Excluir} alt="Imagem de uma caixa de lixo" /></td>
+                            </tr>
+
+                            {props.lista && props.lista.length > 0 ? (
+                                //Vamos mapear os itens da lista
+                                props.lista.map((item) => (
+                                <tr className="item_lista" key={item.idGenero}>
+                                    <td data-cell="Nome">
+                                        {item.nome}
+                                    </td>
+                                    <td data-cell="Gênero" style={{ display: props.visibilidadeColuna }}>Ação</td>
+                                    <td data-cell="Editar"><img src={Editar} alt="Imagem de uma caneta" /></td>
+                                    <td data-cell="Excluir"><img src={Excluir} alt="Imagem de uma caixa de lixo" onClick={props.funcExcluir}/></td>
+                                </tr>
+                                ))
+                            ) :
+                                (
+                                    <p>Nenhum genero foi encontrado.</p>
+                                )
+                            }
                         </tbody>
                     </table>
                 </div>
-        </section>
-
+            </section>
+        </>
     )
 }
-
 export default Lista;

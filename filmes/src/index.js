@@ -1,3 +1,4 @@
+//chamar as telas 
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
@@ -11,5 +12,3 @@ root.render(
   </React.StrictMode>
 );
 
-//app.js -> clonar as telas do login
-//index.js -> redenrizar o app.js login 

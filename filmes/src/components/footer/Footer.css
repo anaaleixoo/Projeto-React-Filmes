@@ -1,9 +1,12 @@
-Footer{
-    background-color: brown; 
-    color: white;
+footer{
+    background-color: #CC3F55;
+    color:white;
 
     display: flex;
     justify-content: center;
-
+    align-items: center;
+   
     height: 40px;
+
+    text-align: center;
 }

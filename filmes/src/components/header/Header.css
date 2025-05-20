@@ -1,14 +1,14 @@
 header{
-    background-color: brown; 
-
+    background-color: #CC3F55;
     height: 75px;
 
-    box-shadow: 1px 4px 4px 0px #00000055;
+    /* Bordar: */
+    box-shadow: 1px 4px 4px 0px #00000045;
     position: relative;
-} 
+}
 
 .cabecalho{
-    display: flex; 
+    display: flex;
     align-items: center;
     justify-content: space-between;
 
@@ -16,16 +16,15 @@ header{
 }
 
 .cabecalho img{
-    height: 60px; 
+    height: 60px;
 }
 
 .link_header{
     margin-left: 45px;
 
-    color: white;
-
-    text-decoration: none; 
-} 
+    color: #FFFF;
+    text-decoration: none;
+}
 
 @media screen and (max-width: 768px){
     .cabecalho img{
@@ -35,5 +34,4 @@ header{
     .link_header{
         margin-left: 10px;
     }
-
 }

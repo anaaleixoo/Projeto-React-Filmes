@@ -1,15 +1,16 @@
-//chamar as telas
-import './App.css'; 
-import CadastroFilme from './pages/cadastroFilme/CadastroFilme.jsx';
- //import Login from "./pages/login/Login.jsx"
+//chamar as telas do index.js
+import { Route } from 'react-router-dom';
+import './App.css';
+import Rotas from "./Routes/routes"
+
+
 function App() {
   return (
     <>
-    {/* chamar as paginas */}
-        {/*<Login/>*/} 
-        <CadastroFilme/>
+    <Rotas/>
     </>
+
   );
 }
-
+//export : exporta o codigo de forma padrao
 export default App;
